@@ -1,0 +1,66 @@
+HOW TO ADD DATA TO THE WEBSITE
+==============================
+
+All content lives in the "data" folder. You only ever edit:
+  data/data.js      (open it with Notepad or any text editor)
+  the photos inside the data folder
+
+Never change main.html, story.html, style.css or script.js.
+
+
+1) CHANGE THE PROFILE PHOTO
+---------------------------
+Replace data/profile_photo.jpg with the new photo.
+Keep the name exactly: profile_photo.jpg
+
+
+2) CHANGE THE BIRTHDAY LETTER
+-----------------------------
+Open data/data.js and edit the text inside message: `...`
+- First line is the title (example: Dear Ahona,)
+- A blank line starts a new paragraph.
+
+
+3) ADD A NEW MEMORY (STORY)
+---------------------------
+Step 1. Put the photo in the data folder (example: story4.jpg).
+
+Step 2. Open data/data.js. Find the stories list. Copy one block and
+        paste it at the end, right after the last block's closing },
+        Then edit it:
+
+    {
+      title: "Our trip to the beach",
+      date: "12 March 2025",
+      photo: "story4.jpg",
+      text: `We went to the beach and ate ice cream.
+
+The waves were huge and we got soaked.`
+    },
+
+Step 3. Save data.js and refresh main.html. The new card and page
+        appear automatically. Nothing else to do.
+
+
+RULES TO AVOID BREAKING IT
+--------------------------
+- Every block must end with a comma:  },
+- title, date and photo are inside "double quotes".
+- The text is inside `backticks` (the key left of the 1 key), not quotes.
+  Do not use a backtick inside your text.
+- The photo name must match the file exactly, including .jpg vs .png
+  and capital letters.
+- Use photos that are not too big (under 1 MB each) so the site loads fast.
+- Keep the folders as they are:
+    main.html, story.html, style.css, script.js
+    data/    (data.js and all photos)
+    images/  (placeholder.svg)
+
+
+IF SOMETHING LOOKS WRONG
+------------------------
+- A photo shows a pink placeholder: the file name in data.js does not
+  match the real file name.
+- The page is empty or has no stories: there is a typo in data.js
+  (missing comma, quote or backtick). Compare with the working blocks.
+- Press Ctrl+F5 to refresh after every change.
